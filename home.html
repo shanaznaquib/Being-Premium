@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental Website Design</title>
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+    :root {
+      --green: #a30a10;
+      --black: #ad2525;
+      --light-color: #040404;
+      --dark: #E5E8E8;
+      --white: #fff;
+      --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+      --border: .2rem solid rgba(0, 0, 0, .1);
+      --outline: .1rem solid rgba(242, 24, 24, 0.849);
+      --outline-hover: .2rem solid var(--green);
+    }
+
+    * {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: all .2s linear;
+    }
+
+    html {
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      scroll-padding-top: 7rem;
+    }
+
+    body {
+      background: #eee;
+    }
+
+    section {
+      padding: 2rem 9%;
+    }
+
+    .heading {
+      text-align: center;
+      padding: 2rem 0;
+      padding-bottom: 3rem;
+      font-size: 3.5rem;
+      color: var(--black);
+    }
+
+    .heading span {
+      color: var(--green);
+
+      display: inline-block;
+      padding: .5rem 3rem;
+
+    }
+
+    .btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: .8rem 3rem;
+      font-size: 1.7rem;
+      border-radius: .5rem;
+      border: .2rem solid var(--black);
+      color: var(--green);
+      cursor: pointer;
+      background: none;
+    }
+
+    header ul li {
+      text-align: center;
+    }
+
+    .btn:hover {
+      background: var(--black);
+      color: #fff;
+    }
+
+    /*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+    /**
+ * copyright 2022 codewithsadee
+ */
+
+
+
+
+
+    /*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+    :root {
+
+      /**
+ * colors
+ */
+
+
+      /**
+ * typography
+ */
+
+      --ff-nunito: 'Nunito', sans-serif;
+      --ff-open-sans: 'Open Sans', sans-serif;
+
+      --fs-1: 2.125rem;
+      --fs-2: 1.875rem;
+      --fs-3: 1.5rem;
+      --fs-4: 1.375rem;
+      --fs-5: 1.125rem;
+      --fs-6: 0.875rem;
+      --fs-7: 0.625rem;
+
+      --fw-400: 400;
+      --fw-600: 600;
+
+      /**
+ * transition
+ */
+
+      --transition: 0.5s ease;
+
+      /**
+ * spacing
+ */
+
+      --section-padding: 50px;
+
+      /**
+ * radius
+ */
+
+      --radius-10: 10px;
+      --radius-14: 14px;
+      --radius-18: 18px;
+
+      /**
+ * shadow
+ */
+
+      --shadow-1: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+      --shadow-2: 3px 3px 9px hsla(204, 92%, 59%, 0.3);
+
+    }
+
+
+
+    header {
+      background: linear-gradient(to bottom, red 0%, darkred 100%);
+      margin-bottom: 0;
+      padding: 10px;
+
+    }
+
+    .container,
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+
+    }
+
+    img {
+      width: 80px;
+      border-radius: 270px;
+    }
+
+    .card-banner img {
+      max-width: 100% !important;
+      width: auto;
+      border-radius: 10%;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+    }
+
+    nav ul li {
+      float: right;
+      margin-left: 20px;
+
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+
+
+    #menu-btn {
+      display: none;
+    }
+
+
+    .home {
+      display: flex;
+      justify-content: right;
+      background: url(../image/banner-bg.webp) no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-top: 17rem;
+      padding-bottom: 10rem;
+      background-image: url("https://4kwallpapers.com/images/wallpapers/rolls-royce-ghost-2020-white-background-5k-8k-8000x6386-2554.jpg");
+    }
+
+    .home .content a {
+      float: right;
+      margin-top: 100px;
+      margin-left: 150px;
+    }
+
+    .home .content {
+      align-items: right;
+      width: 60rem;
+    }
+
+
+    .home .content h3 {
+      font-size: 3rem;
+      text-shadow: #666;
+      float: right;
+    }
+
+
+    .home .content p {
+      margin-right: 100px;
+      color: var(--red);
+      float: right;
+      font-size: 1.7rem;
+      padding: 1rem 0;
+      line-height: 1.8;
+    }
+
+    .features .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      gap: 1.5rem;
+    }
+
+    .features .box-container .box {
+      padding: 3rem 2rem;
+      background: #fff;
+      outline: var(--outline);
+      outline-offset: -1rem;
+      text-align: center;
+      box-shadow: var(--box-shadow);
+
+    }
+
+    .features .box-container .box:hover {
+      background: var(--dark);
+      outline-offset: 0rem;
+    }
+
+    .features .box-container .box img {
+      margin: 1rem 0;
+      height: 15rem;
+    }
+
+    .features .box-container .box h3 {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      color: var(--black);
+
+    }
+
+    .features .box-container .box p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      color: var(--light-color);
+      padding: 1rem 0;
+    }
+
+    /*-----------------------------------*\
+  #FEATURED CAR
+\*-----------------------------------*/
+
+    .featured-car .title-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px 15px;
+      margin-bottom: 30px;
+    }
+
+    .featured-car-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--independence);
+      font-size: var(--fs-6);
+    }
+
+    .featured-car-link ion-icon {
+      margin-top: 3px;
+      transition: var(--transition);
+    }
+
+
+    .featured-car-list {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 30px;
+    }
+
+    .featured-car-card {
+      background: var(--gradient);
+      border: 1px solid var(--white);
+      border-radius: var(--radius-18);
+      padding: 10px;
+      box-shadow: var(--shadow-1);
+    }
+
+    .featured-car-card .card-banner {
+      background: hsla(0, 94%, 47%, 0.2);
+      aspect-ratio: 3 / 2;
+      border-radius: var(--radius-18);
+      overflow: hidden;
+    }
+
+    .featured-car-card .card-banner>img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .featured-car-card .card-content {
+      padding: 20px 10px 10px;
+    }
+
+    .featured-car-card .card-title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 15px;
+    }
+
+    .featured-car-card .card-title {
+      width: calc(100% - 60px);
+    }
+
+    .featured-car-card .card-title>a {
+      color: inherit;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .featured-car-card .card-title>a:is(:hover, :focus) {
+      color: var(--carolina-blue);
+    }
+
+    .featured-car-card .year {
+      font-family: var(--ff-nunito);
+      font-size: var(--fs-6);
+      font-weight: var(--fw-600);
+      padding: 3px 12px;
+      border: 2px dashed hsla(204, 91%, 53%, 0.4);
+      border-radius: var(--radius-14);
+    }
+
+    .featured-car-card .card-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+      margin-bottom: 15px;
+    }
+
+    .featured-car-card .card-list-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .featured-car-card .card-list-item ion-icon {
+      font-size: 20px;
+      color: var(--carolina-blue);
+      --ionicon-stroke-width: 38px;
+    }
+
+    .featured-car-card .card-item-text {
+      color: var(--independence);
+      font-size: var(--fs-6);
+    }
+
+    .featured-car-card .card-price-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .featured-car-card .card-price {
+      font-family: var(--ff-nunito);
+      font-size: var(--fs-6);
+      color: var(--space-cadet);
+    }
+
+    .featured-car-card .card-price strong {
+      font-size: var(--fs-3);
+      font-weight: var(--fw-400);
+    }
+
+    .featured-car-card .btn:last-child {
+      --height: 36px;
+      min-width: 100%;
+    }
+
+    .featured-car-card .fav-btn {
+      --background: var(--beau-blue);
+      --color: var(--blue-jeans);
+      --height: 36px;
+      --width: 36px;
+      --shadow-2: none;
+    }
+
+    .featured-car-card .fav-btn ion-icon {
+      font-size: 18px;
+    }
+
+    .featured-car-card .fav-btn:is(:hover, :focus) {
+      --background: var(--lavender-blush);
+      --color: var(--red-salsa);
+    }
+
+
+
+
+
+    /*-----------------------------------*\
+  #GET START
+\*-----------------------------------*/
+
+    .get-start .section-title {
+      margin-bottom: 25px;
+    }
+
+    .get-start-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .get-start-card {
+      background: var(--white);
+      padding: 20px;
+      border-radius: var(--radius-28);
+      border: 1px solid var(--white);
+      transition: var(--transition);
+    }
+
+    .get-start-card:hover {
+      background: var(RED);
+      box-shadow: var(--shadow-1);
+    }
+
+
+    .get-start-card .card-title {
+      color: var(--space-cadet);
+      font-family: var(--ff-nunito);
+      font-weight: var(--fw-400);
+      margin-bottom: 15px;
+    }
+
+    .get-start-card .card-text {
+      color: var(--independence);
+    }
+
+    .get-start-card .card-link {
+      position: relative;
+      color: var(RED);
+      width: max-content;
+    }
+
+    .get-start-card .card-link::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(red);
+      transition: var(--transition);
+    }
+
+    .get-start-card .card-link:is(:hover, :focus)::before {
+      width: 100%;
+    }
+
+
+
+
+
+    .blogs .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      gap: 1.5rem;
+    }
+
+    .blogs .box-container .box {
+      overflow: hidden;
+      border-radius: .5rem;
+      box-shadow: var(--box-shadow);
+      background: #fff;
+    }
+
+    .blogs .box-container .box img {
+      height: 25rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .blogs .box-container .box .content {
+      padding: 2rem;
+    }
+
+    .blogs .box-container .box .content .icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: var(--border);
+    }
+
+    .blogs .box-container .box .content .icons a {
+      color: var(--light-color);
+      font-size: 1.5rem;
+    }
+
+    .blogs .box-container .box .content .icons a:hover {
+      color: var(--black);
+    }
+
+    .blogs .box-container .box .content h3 {
+      line-height: 1.8;
+      color: var(--black);
+      font-size: 2.2rem;
+      padding: .5rem 0;
+    }
+
+    .blogs .box-container .box .content p {
+      line-height: 1.8;
+      color: var(--light-color);
+      font-size: 1.5rem;
+      padding: .5rem 0;
+
+    }
+
+    .footer {
+      background: #fff;
+    }
+
+    .footer .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      gap: 1.5rem;
+    }
+
+    .footer .box-container .box h3 {
+      font-size: 2.5rem;
+      color: var(--black);
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box h3 i {
+      color: var(--green);
+    }
+
+    .footer .box-container .box .links {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--light-color);
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box .links i {
+      color: var(--green);
+      padding-right: .5rem;
+    }
+
+    .footer .box-container .box .links:hover i {
+      padding-right: 2rem;
+    }
+
+    .footer .box-container .box p {
+      line-height: 1.8;
+      font-size: 1.5rem;
+      color: var(--light-color);
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box .share a {
+      height: 4rem;
+      width: 4rem;
+      line-height: 4rem;
+      border-radius: .5rem;
+      font-size: 2rem;
+      color: var(--black);
+      margin-right: .2rem;
+      background: #eee;
+      text-align: center;
+    }
+
+    .footer .box-container .box .share a:hover {
+      background: var(--green);
+      color: #fff;
+    }
+
+    .footer .box-container .box .email {
+      width: 100%;
+      margin: .7rem;
+      padding: 1rem;
+      border-radius: .5rem;
+      background: #eee;
+      font-size: 1.6rem;
+      color: var(--black);
+      text-transform: none;
+    }
+
+    @media (min-width: 350px) {
+
+
+      /**
+ * FEATURED CAR
+ */
+
+      .featured-car-card .card-list {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .featured-car-card .card-price {
+        margin-right: auto;
+      }
+
+      .featured-car-card .btn:last-child {
+        min-width: max-content;
+        padding-inline: 15px;
+      }
+
+    }
+
+    /**
+   * FEATURED CAR
+   */
+
+    .featured-car-list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+
+    /**
+ * GET START
+ */
+
+    .get-start-list {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /**
+   * FEATURED CAR 
+   */
+
+    .featured-car-list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+
+    /**
+ * GET START
+ */
+
+    .get-start-list {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+
+
+
+
+    /* media queries  */
+
+    @media (max-width:991px) {
+
+      html {
+        font-size: 100%;
+      }
+
+      .header {
+        padding: 2rem;
+      }
+
+      section {
+        padding: 2rem;
+      }
+
+    }
+
+    @media (max-width:800px) {
+
+      #menu-btn {
+        display: inline-block;
+      }
+
+      .header .search-form {
+        width: 90%;
+      }
+
+      .header .navbar {
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: #fff;
+      }
+
+      .header .navbar.active {
+        right: 2rem;
+        transition: .4s linear;
+      }
+
+      .header .navbar a {
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+      }
+
+    }
+
+    @media (max-width:450px) {
+
+      html {
+        font-size: 50%;
+      }
+
+      .heading {
+        font-size: 2.5rem;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .footer .box-container .box .payment-img {
+        margin: 2rem auto;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- header section starts  -->
+  <header>
+    <div class="container">
+      <img src="logo.jpg" alt="logo">
+      <nav>
+        <ul>
+          <center>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href=" feedback.html">Feedback</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </center>
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- header section ends -->
+
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+
+    <div class="content">
+      <h3>we've got all great models for your</h3>
+      <p>Complete miles of journey <br> with one step</p>
+      <a href="#" class="btn">Hire now</a>
+
+    </div>
+
+  </section>
+
+  <section class="section featured-car" id="featured-car">
+    <div class="container">
+
+      <div class="title-wrapper">
+        <h2 class="h2 section-title">Featured cars</h2>
+
+        <a href="#" class="featured-car-link">
+          <span>View more</span>
+
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+      </div>
+
+      <ul class="featured-car-list">
+
+        <li>
+          <div class="featured-car-card">
+
+            <figure class="card-banner">
+              <img src="electric.webp" alt="Toyota RAV4 2021" loading="lazy" width="440" height="300" class="w-100">
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title">
+                  <a href="#">ELECTRIC</a>
+                </h3>
+
+                <data class="year" value="2021">2021</data>
+              </div>
+
+              <ul class="card-list">
+
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+
+                  <span class="card-item-text">4 People</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+
+                  <span class="card-item-text">Hybrid</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+
+                  <span class="card-item-text">6.1km / 1-litre</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                  <span class="card-item-text">Automatic</span>
+                </li>
+
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$440</strong> / month
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+
+                <button class="btn">Rent now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="featured-car-card">
+
+            <figure class="card-banner">
+              <img src="hatchback.jpg" alt="BMW 3 Series 2019" loading="lazy" width="440" height="300" class="w-100">
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title">
+                  <a href="#">HATCHBACK</a>
+                </h3>
+
+                <data class="year" value="2019">2019</data>
+              </div>
+
+              <ul class="card-list">
+
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+
+                  <span class="card-item-text">4 People</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+
+                  <span class="card-item-text">8.2km / 1-litre</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                  <span class="card-item-text">Automatic</span>
+                </li>
+
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$350</strong> / month
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+
+                <button class="btn">Rent now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="featured-car-card">
+
+            <figure class="card-banner">
+              <img src="performance.jpg" alt="Volkswagen T-Cross 2020" loading="lazy" width="440" height="300"
+                class="w-100">
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title">
+                  <a href="#">PEFORMANCE</a>
+                </h3>
+
+                <data class="year" value="2020">2020</data>
+              </div>
+
+              <ul class="card-list">
+
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+
+                  <span class="card-item-text">4 People</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+
+                  <span class="card-item-text">5.3km / 1-litre</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                  <span class="card-item-text">Automatic</span>
+                </li>
+
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$400</strong> / month
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+
+                <button class="btn">Rent now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="featured-car-card">
+
+            <figure class="card-banner">
+              <img src="sedans.webp" alt="Cadillac Escalade 2020" loading="lazy" width="600" height="300" class="w-100">
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title">
+                  <a href="#">SEDANS</a>
+                </h3>
+
+                <data class="year" value="2020">2020</data>
+              </div>
+
+              <ul class="card-list">
+
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+
+                  <span class="card-item-text">4 People</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+
+                  <span class="card-item-text">7.7km / 1-litre</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                  <span class="card-item-text">Automatic</span>
+                </li>
+
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$620</strong> / month
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+
+                <button class="btn">Rent now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="featured-car-card">
+
+            <figure class="card-banner">
+              <img src="sports.webp" alt="BMW 4 Series GTI 2021" loading="lazy" width="440" height="300" class="w-100">
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title">
+                  <a href="#">SPORTS</a>
+                </h3>
+
+                <data class="year" value="2021">2021</data>
+              </div>
+
+              <ul class="card-list">
+
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+
+                  <span class="card-item-text">4 People</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+
+                  <span class="card-item-text">7.6km / 1-litre</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                  <span class="card-item-text">Automatic</span>
+                </li>
+
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$530</strong> / month
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+
+                <button class="btn">Rent now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="featured-car-card">
+
+            <figure class="card-banner">
+              <img src="royalty.webp">
+              <width="440" height="300" class="w-100">
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-title-wrapper">
+                <h3 class="h3 card-title">
+                  <a href="#">ROYALTY</a>
+                </h3>
+
+                <data class="year" value="2019">2019</data>
+              </div>
+
+              <ul class="card-list">
+
+                <li class="card-list-item">
+                  <ion-icon name="people-outline"></ion-icon>
+
+                  <span class="card-item-text">4 People</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="flash-outline"></ion-icon>
+
+                  <span class="card-item-text">Gasoline</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="speedometer-outline"></ion-icon>
+
+                  <span class="card-item-text">7.2km / 1-litre</span>
+                </li>
+
+                <li class="card-list-item">
+                  <ion-icon name="hardware-chip-outline"></ion-icon>
+
+                  <span class="card-item-text">Automatic</span>
+                </li>
+
+              </ul>
+
+              <div class="card-price-wrapper">
+
+                <p class="card-price">
+                  <strong>$490</strong> / month
+                </p>
+
+                <button class="btn fav-btn" aria-label="Add to favourite list">
+                  <ion-icon name="heart-outline"></ion-icon>
+                </button>
+
+                <button class="btn">Rent now</button>
+
+              </div>
+
+            </div>
+
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+  <section class="section get-start">
+    <div class="container">
+
+      <h2 class="h2 section-title">Get started with 4 simple steps</h2>
+
+      <ul class="get-start-list">
+
+        <li>
+          <div class="get-start-card">
+
+            <div class="card-icon icon-1">
+              <ion-icon name="person-add-outline"></ion-icon>
+            </div>
+
+            <h3 class="card-title">Create a profile</h3>
+
+            <p class="card-text">
+              If you are going to use a passage of Lorem Ipsum, you need to be sure.
+            </p>
+
+            <a href="#" class="card-link">Get started</a>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="get-start-card">
+
+            <div class="card-icon icon-2">
+              <ion-icon name="car-outline"></ion-icon>
+            </div>
+
+            <h3 class="card-title">Tell us what car you want</h3>
+
+            <p class="card-text">
+              Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+            </p>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="get-start-card">
+
+            <div class="card-icon icon-3">
+              <ion-icon name="person-outline"></ion-icon>
+            </div>
+
+            <h3 class="card-title">Match with seller</h3>
+
+            <p class="card-text">
+              It to make a type specimen book. It has survived not only five centuries, but also the leap into
+              electronic
+            </p>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="get-start-card">
+
+            <div class="card-icon icon-4">
+              <ion-icon name="card-outline"></ion-icon>
+            </div>
+
+            <h3 class="card-title">Make a deal</h3>
+
+            <p class="card-text">
+              There are many variations of passages of Lorem available, but the majority have suffered alteration
+            </p>
+
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+
+
+  <!-- home section ends -->
+
+  <!-- features section starts  -->
+
+  <section class="features" id="features">
+
+    <h1 class="heading"> our <span>features</span> </h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>Brand New</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+      <div class="box">
+        <h3>free delivery</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+      <div class="box">
+        <h3>easy payments</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, earum!</p>
+        <a href="#" class="btn">read more</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- features section ends -->
+  <!--blogs section starts here..-->
+
+  <section class="blogs" id="blogs">
+    <h1 class="heading">Our <span>Blogs</span></h1>
+    <div class="box-container">
+
+      <div class="box">
+        <img src="blog-1.jpg" alt="">
+        <div class="content">
+          <div class="icons">
+            <a href="#"> <i class="fas fa-user"></i>By user</a>
+            <a href="#"> <i class="fas fa-calendar"></i>3nd April 2020</a>
+          </div>
+          <h3>Brand New Black Car</h3>
+          <p>There’s three things men always talk about – women, sports, and cars</p>
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="blog-2.jpg" alt="">
+        <div class="content">
+          <div class="icons">
+            <a href="#"> <i class="fas fa-user"></i>By user</a>
+            <a href="#"> <i class="fas fa-calendar"></i>3nd April 2020</a>
+          </div>
+          <h3>You got to grab this brand new blue car</h3>
+          <p>Money may not buy happiness, but I'd rather cry in a Jaguar than on a bus</p>
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+      <div class="box">
+        <img src="blog-3.jpg" alt="">
+        <div class="content">
+          <div class="icons">
+            <a href="#"> <i class="fas fa-user"></i>By user</a>
+            <a href="#"> <i class="fas fa-calendar"></i>3nd April 2020</a>
+          </div>
+          <h3>The coolest car in Town</h3>
+          <p>You can know or not know how a car runs and still enjoy riding in a car</p>
+          <a href="#" class="btn">Read more</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>BeingPremium <i class="fas fa-car"></i></h3>
+        <p>"What we drive says a lot about who we are"
+        </p>
+        <div class="share">
+          <a href="#" class="fab fa-facebook-f"></a>
+          <a href="#" class="fab fa-twitter"></a>
+          <a href="#" class="fab fa-instagram"></a>
+          <a href="#" class="fab fa-linkedin"></a>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Contact info</h3>
+        <a href="#" class="links"> <i class="fas fa-phone">+254 700 000 000</i></a>
+        <a href="#" class="links"> <i class="fas fa-envelope">BeingPremium.com</i></a>
+        <a href="#" class="links"> <i class="fas fa-map-marker-alt">Presidency University</i></a>
+      </div>
+
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="#" class="links"> <i class="fas fa-arrow-right">Home</i></a>
+        <a href="#" class="links"> <i class="fas fa-arrow-right">features</i></a>
+        <a href="#" class="links"> <i class="fas fa-arrow-right">vehicles</i></a>
+        <a href="#" class="links"> <i class="fas fa-arrow-right">categories</i></a>
+        <a href="#" class="links"> <i class="fas fa-arrow-right">review</i></a>
+        <a href="#" class="links"> <i class="fas fa-arrow-right">blogs</i></a>
+      </div>
+
+      <div class="box">
+        <h3>Newsletter</h3>
+        <p>Subscribe for the latest updates</p>
+        <input type="email" class="email" placeholder="your email">
+        <input type="submit" class="btn" value="Subscribe">
+
+      </div>
+
+    </div>
+  </section>
+</body>
+
+</html>
